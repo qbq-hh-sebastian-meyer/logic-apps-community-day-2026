@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logic Apps Community Day — 26 November 2026</title>
+<link rel="stylesheet" href="_ds/industry-74a05b50-8387-4e51-b928-211d28780637/styles.css">
+<script src="_ds/industry-74a05b50-8387-4e51-b928-211d28780637/_ds_bundle.js"></script>
+<style>
+  body { margin: 0; text-wrap: pretty; background: var(--color-bg); color: var(--color-text); }
+  a { color: var(--color-accent-700); text-underline-offset: 3px; }
+  a:hover { color: var(--color-accent-800); }
+  @keyframes lacd-pulse { 0%, 100% { opacity: 1 } 50% { opacity: 0.35 } }
+</style>
+</helmet>
+
+<div style="font-family: var(--font-body); font-size: 15px; line-height: 24px">
+
+  <nav class="nav" style="padding: 16px max(20px, calc((100% - 1160px) / 2 + 20px)); gap: 24px; align-items: center; border-bottom: 1px solid var(--color-divider)">
+    <span class="nav-brand" style="display: flex; align-items: center; gap: 12px; margin-right: auto; font-size: 17px; letter-spacing: 0.01em; text-transform: uppercase">
+      <img src="assets/logo.png" alt="Logic Apps Aviators" style="height: 34px; width: auto">
+      <span>Logic Apps Community Day</span>
+    </span>
+    <a href="#agenda" style="font-size: 14px; white-space: nowrap">Agenda</a>
+    <a href="#speakers" style="font-size: 14px; white-space: nowrap">Speakers</a>
+    <a href="#cfs" style="font-size: 14px; white-space: nowrap">Call for speakers</a>
+    <a href="#faq" style="font-size: 14px; white-space: nowrap">FAQ</a>
+    <a class="btn btn-primary" href="{{ calendarHref }}" download="logic-apps-community-day.ics" style="white-space: nowrap">Add to calendar</a>
+  </nav>
+
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 clamp(20px, 5vw, 72px)">
+
+    <section style="padding: 84px 0 60px">
+      <span style="display: block; font-family: var(--font-body); font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">Online · Free · Worldwide</span>
+      <hr style="height: 1px; border: 0; margin: 0 0 12px; background: var(--color-divider)">
+      <h1 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(46px, 6.6vw, 92px); line-height: clamp(48px, 6.9vw, 96px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 0 -0.052em">
+        <span style="display: block">Logic Apps</span>
+        <span style="display: block">Community Day</span>
+        <span style="display: block; color: var(--color-accent-700)">26 November 2026</span>
+      </h1>
+      <p style="font-size: 17px; line-height: 26px; max-width: 58ch; margin: 32px 0 0">One evening of Logic Apps, the wider Azure integration stack, and the AI patterns being built on top of it. Ten talks from the community, streamed live on YouTube, free to attend from anywhere.</p>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px">
+        <a class="btn btn-primary" href="{{ calendarHref }}" download="logic-apps-community-day.ics" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Add to calendar</a>
+        <a class="btn btn-secondary" href="#cfs" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Submit a talk</a>
+      </div>
+    </section>
+
+    <section aria-label="Countdown and start time" style="padding: 0 0 60px">
+      <div class="blueprint" style="border: 1px solid var(--color-divider)">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <header style="display: flex; flex-wrap: wrap; align-items: stretch; border-bottom: 1px solid var(--color-divider); font-family: var(--font-body); font-size: 13px; line-height: 24px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600">
+          <span style="flex: 1; min-width: 16ch; padding: 12px 24px">Event register — LACD 2026</span>
+          <span style="border-left: 1px solid var(--color-divider); padding: 12px 24px; white-space: nowrap; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Doors 19:00 CEST</span>
+          <span style="border-left: 1px solid var(--color-divider); padding: 12px 24px; white-space: nowrap; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Sheet 01 of 01</span>
+        </header>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))">
+          <div style="padding: 20px 24px; border-right: 1px solid var(--color-divider)">
+            <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Days</span>
+            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 44px; line-height: 48px; font-feature-settings: 'tnum' 1">{{ cdDays }}</span>
+          </div>
+          <div style="padding: 20px 24px; border-right: 1px solid var(--color-divider)">
+            <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Hours</span>
+            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 44px; line-height: 48px; font-feature-settings: 'tnum' 1">{{ cdHours }}</span>
+          </div>
+          <div style="padding: 20px 24px; border-right: 1px solid var(--color-divider)">
+            <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Minutes</span>
+            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 44px; line-height: 48px; font-feature-settings: 'tnum' 1">{{ cdMinutes }}</span>
+          </div>
+          <div style="padding: 20px 24px">
+            <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Seconds</span>
+            <span style="font-family: var(--font-heading); font-weight: 600; font-size: 44px; line-height: 48px; font-feature-settings: 'tnum' 1">{{ cdSeconds }}</span>
+          </div>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; padding: 16px 24px; border-top: 1px solid var(--color-divider)">
+          <label for="lacd-tz" style="font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Start time in</label>
+          <select class="input" id="lacd-tz" value="{{ zone }}" onChange="{{ onZoneChange }}" style="width: auto; max-width: 100%; min-height: 36px; font-family: var(--font-body)">
+            <sc-for list="{{ zones }}" as="z" hint-placeholder-count="6">
+              <option value="{{ z.id }}">{{ z.label }}</option>
+            </sc-for>
+          </select>
+          <span style="font-family: var(--font-heading); font-weight: 600; font-size: 24px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; font-feature-settings: 'tnum' 1">{{ zoneTime }}</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" style="padding: 48px 0 60px">
+      <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">02 · Agenda</span>
+      <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)">
+      <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: 36px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">Ten talks, one evening</h2>
+      <p style="font-size: 15px; line-height: 24px; max-width: 56ch; margin: 16px 0 32px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Five 25-minute sessions and five 15-minute lightning talks, alternating. The running order is fixed; speakers and titles are confirmed as the call for speakers closes.</p>
+      <table class="table" style="table-layout: fixed">
+        
+        <thead>
+          <tr>
+            <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">CEST</th>
+            <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Slot</th>
+            <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Length</th>
+            <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Topic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ agenda }}" as="row" hint-placeholder-count="7">
+            <tr>
+              <td style="padding: 14px 24px 14px 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; color: var(--color-accent-700); font-feature-settings: 'tnum' 1; vertical-align: top">{{ row.time }}</td>
+              <td style="padding: 14px 24px 14px 0; font-family: var(--font-heading); font-weight: 600; font-size: 21px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase; vertical-align: top">{{ row.slot }}</td>
+              <td style="padding: 14px 24px 14px 0; font-size: 14px; line-height: 24px; font-feature-settings: 'tnum' 1; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: top; white-space: nowrap">{{ row.dur }}</td>
+              <td style="padding: 14px 24px 14px 0; font-size: 15px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 78%, transparent); vertical-align: top">{{ row.topic }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+      <p style="font-size: 13px; line-height: 24px; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">All times CEST. Use the converter above for your own timezone.</p>
+    </section>
+
+    <section id="speakers" style="padding: 48px 0 60px">
+      <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">03 · Speakers</span>
+      <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: clamp(24px, 3vw, 44px)">
+        <sc-for list="{{ speakers }}" as="s" hint-placeholder-count="4">
+          <div class="blueprint" style="padding: 0">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <div style="aspect-ratio: 4 / 5; display: grid; place-items: center; border-bottom: 1px solid var(--color-divider); background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 12%, transparent) 0 6px, transparent 6px 12px)">
+              <span style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-accent-800)">portrait — tba</span>
+            </div>
+            <div style="padding: 16px 20px 20px">
+              <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">{{ s.num }}</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: 600; font-size: 22px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin-top: 6px">{{ s.name }}</span>
+              <span style="display: block; font-size: 14px; line-height: 22px; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ s.note }}</span>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="cfs" style="padding: 48px 0 60px">
+      <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">04 · Call for speakers</span>
+      <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 4vw, 64px); align-items: start">
+        <div>
+          <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: 36px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">The agenda is open</h2>
+          <p style="font-size: 15px; line-height: 24px; max-width: 46ch; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Ten slots: five 25-minute sessions and five 15-minute lightning talks. First-time speakers are welcome — the community day exists to get more Logic Apps work in front of people who use it every day.</p>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px">
+            <a class="btn btn-primary" href="https://sessionize.com/logic-apps-community-day-2026" style="min-height: 40px; padding-inline: 20px; font-size: 15px" target="_blank" rel="noopener noreferrer">Submit a talk</a>
+          </div>
+          <p style="font-size: 13px; line-height: 24px; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Submission form and deadline: to be announced.</p>
+        </div>
+        <div style="display: grid; gap: 16px">
+          <sc-for list="{{ topics }}" as="t" hint-placeholder-count="4">
+            <div class="blueprint" style="padding: 20px 24px">
+              <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+              <span style="display: block; font-family: var(--font-heading); font-weight: 600; font-size: 20px; line-height: 24px; letter-spacing: 0.02em; text-transform: uppercase">{{ t.title }}</span>
+              <span style="display: block; font-size: 14px; line-height: 22px; margin-top: 8px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ t.body }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section id="organizers" style="padding: 48px 0 60px">
+      <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">05 · Organizers</span>
+      <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider)">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(20px, 3vw, 40px)">
+        <sc-for list="{{ organizers }}" as="o" hint-placeholder-count="3">
+          <div class="blueprint" style="padding: 20px 24px">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">{{ o.num }}</span>
+            <span style="display: block; font-family: var(--font-heading); font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin-top: 6px">{{ o.name }}</span>
+            <span style="display: block; font-size: 14px; line-height: 22px; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ o.role }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="faq" style="padding: 48px 0 60px">
+      <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">06 · FAQ</span>
+      <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)">
+      <div style="border-top: 1px solid var(--color-divider); max-width: 78ch">
+        <sc-for list="{{ faq }}" as="f" hint-placeholder-count="6">
+          <details style="border-bottom: 1px solid var(--color-divider); padding: 16px 0">
+            <summary style="cursor: pointer; font-family: var(--font-heading); font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; list-style: none">{{ f.q }}</summary>
+            <p style="font-size: 15px; line-height: 24px; margin: 12px 0 0; max-width: 62ch; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ f.a }}</p>
+          </details>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="padding: 48px 0 60px">
+      <div class="blueprint" style="padding: clamp(24px, 4vw, 48px)">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">26 November, 19:00 CEST</h2>
+        <p style="font-size: 16px; line-height: 24px; max-width: 52ch; margin: 20px 0 0">Free, online, and streamed live on YouTube. Put it in your calendar now; the stream link and the full agenda follow closer to the day.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px">
+          <a class="btn btn-primary" href="{{ calendarHref }}" download="logic-apps-community-day.ics" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Add to calendar</a>
+          <a class="btn btn-secondary" href="#agenda" style="min-height: 40px; padding-inline: 20px; font-size: 15px">See the agenda</a>
+        </div>
+      </div>
+    </section>
+
+    <footer style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; padding: 32px 0 48px; border-top: 1px solid var(--color-divider); font-size: 13px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">
+      <span style="margin-right: auto">Logic Apps Community Day · 26 November 2026 · Online</span>
+      <span style="letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700)">#LogicAppsAviators</span>
+      <span>Streamed live on YouTube</span>
+    </footer>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const START = Date.UTC(2026, 10, 26, 18, 0, 0); // 19:00 Europe/Berlin (UTC+1) on 26 Nov 2026
+
+const ZONE_LIST = [
+  ["Europe/Berlin", "Berlin / Amsterdam"],
+  ["Europe/London", "London"],
+  ["Europe/Lisbon", "Lisbon"],
+  ["Europe/Athens", "Athens"],
+  ["Asia/Kolkata", "Bengaluru"],
+  ["Asia/Dubai", "Dubai"],
+  ["Asia/Singapore", "Singapore"],
+  ["Australia/Sydney", "Sydney"],
+  ["America/New_York", "New York"],
+  ["America/Chicago", "Chicago"],
+  ["America/Sao_Paulo", "São Paulo"],
+  ["America/Los_Angeles", "Los Angeles"],
+  ["UTC", "UTC"]
+];
+
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    let local = "Europe/Berlin";
+    try { local = Intl.DateTimeFormat().resolvedOptions().timeZone || local; } catch (e) {}
+    const zones = ZONE_LIST.some(z => z[0] === local)
+      ? ZONE_LIST
+      : [[local, local.replace(/_/g, " ") + " (yours)"]].concat(ZONE_LIST);
+    this.state = { now: Date.now(), zone: local, zones };
+  }
+
+  componentDidMount() {
+    this.timer = setInterval(() => this.setState({ now: Date.now() }), 1000);
+  }
+  componentWillUnmount() { clearInterval(this.timer); }
+
+  pad(n) { return String(n).padStart(2, "0"); }
+
+  zoneTime() {
+    try {
+      return new Intl.DateTimeFormat("en-GB", {
+        timeZone: this.state.zone, weekday: "short", day: "numeric",
+        month: "short", hour: "2-digit", minute: "2-digit", hour12: false
+      }).format(new Date(START));
+    } catch (e) { return "26 Nov, 18:00 UTC"; }
+  }
+
+  icsHref() {
+    const ics = [
+      "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Logic Apps Community Day//EN",
+      "BEGIN:VEVENT", "UID:lacd-2026-11-26@logicappsaviators",
+      "DTSTAMP:20260910T000000Z", "DTSTART:20261126T180000Z", "DTEND:20261126T215500Z",
+      "SUMMARY:Logic Apps Community Day",
+      "DESCRIPTION:Free online community day on Logic Apps, Azure Integration Services and AI. Streamed live on YouTube. #LogicAppsAviators",
+      "LOCATION:Online — YouTube Live", "END:VEVENT", "END:VCALENDAR"
+    ].join("\r\n");
+    return "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
+  }
+
+  renderVals() {
+    const diff = Math.max(0, START - this.state.now);
+    const s = Math.floor(diff / 1000);
+    return {
+      cdDays: this.pad(Math.floor(s / 86400)),
+      cdHours: this.pad(Math.floor(s / 3600) % 24),
+      cdMinutes: this.pad(Math.floor(s / 60) % 60),
+      cdSeconds: this.pad(s % 60),
+      zone: this.state.zone,
+      zones: this.state.zones.map(z => ({ id: z[0], label: z[1] })),
+      zoneTime: this.zoneTime(),
+      onZoneChange: (e) => this.setState({ zone: e.target.value }),
+      calendarHref: this.icsHref(),
+      agenda: [
+        { time: "19:00", slot: "Welcome", dur: "10 min", topic: "What the evening covers and how to ask questions in the stream." },
+        { time: "19:10", slot: "Session 1", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: "19:35", slot: "Lightning 1", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: "19:50", slot: "Session 2", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: "20:15", slot: "Lightning 2", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: "20:30", slot: "Break", dur: "10 min", topic: "Chat stays open." },
+        { time: "20:40", slot: "Session 3", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: "21:05", slot: "Lightning 3", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: "21:20", slot: "Session 4", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: "21:45", slot: "Lightning 4", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: "22:00", slot: "Session 5", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: "22:25", slot: "Lightning 5", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: "22:40", slot: "Wrap-up", dur: "15 min", topic: "Open Q&A with the speakers, then close." }
+      ],
+      speakers: [
+        { num: "01", name: "Session 1 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
+        { num: "02", name: "Session 2 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
+        { num: "03", name: "Session 3 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
+        { num: "04", name: "Session 4 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
+        { num: "05", name: "Session 5 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
+        { num: "06", name: "Lightning 1 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
+        { num: "07", name: "Lightning 2 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
+        { num: "08", name: "Lightning 3 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
+        { num: "09", name: "Lightning 4 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
+        { num: "10", name: "Lightning 5 — TBA", note: "15-minute slot. Announced when the call for speakers closes." }
+      ],
+      topics: [
+        { title: "Logic Apps in practice", body: "Standard and Consumption, workflow design, deployment, monitoring, performance, migration stories." },
+        { title: "The wider integration stack", body: "Service Bus, Event Grid, API Management, Functions, Data Factory — how the pieces fit together." },
+        { title: "AI on top of integration", body: "Agent workflows, Azure OpenAI connectors, document and message processing, retrieval patterns." },
+        { title: "Field reports", body: "What broke, what you changed, what you would build differently. Short and specific beats polished." }
+      ],
+      organizers: [
+        { num: "01", name: "Organizer 1 — TBA", role: "Programme and speakers" },
+        { num: "02", name: "Organizer 2 — TBA", role: "Stream and production" },
+        { num: "03", name: "Organizer 3 — TBA", role: "Community and comms" }
+      ],
+      faq: [
+        { q: "What does it cost?", a: "Nothing. The day is free and there is no ticket to buy." },
+        { q: "Do I need to register?", a: "No registration is required. Add the date to your calendar and join the stream on the day." },
+        { q: "Where do I watch?", a: "The sessions are streamed live on YouTube. The stream link is published here before the event." },
+        { q: "What time is it in my timezone?", a: "The event starts at 19:00 CEST on 26 November 2026. Use the converter at the top of the page to see the start time where you are." },
+        { q: "Will the recordings be available?", a: "Yes. Sessions stay on the YouTube channel after the stream ends." },
+        { q: "How do I speak?", a: "Submit a talk through the call for speakers. Ten slots are open — five 25-minute sessions and five 15-minute lightning talks — and first-time speakers are welcome." },
+        { q: "What level are the sessions?", a: "Mixed. The agenda is built so that people new to Azure Integration Services and long-time Logic Apps developers both get something out of the evening." }
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
