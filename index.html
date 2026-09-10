@@ -185,11 +185,16 @@
       <hr style="height: 1px; border: 0; margin: 0 0 32px; background: var(--color-divider)">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: clamp(20px, 3vw, 40px)">
         <sc-for list="{{ organizers }}" as="o" hint-placeholder-count="3">
-          <div class="blueprint" style="padding: 20px 24px">
+          <div class="blueprint" style="padding: 0">
             <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-            <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">{{ o.num }}</span>
-            <span style="display: block; font-family: var(--font-heading); font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin-top: 6px">{{ o.name }}</span>
-            <span style="display: block; font-size: 14px; line-height: 22px; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ o.role }}</span>
+            <div style="aspect-ratio: 4 / 5; overflow: hidden; border-bottom: 1px solid var(--color-divider); background: color-mix(in srgb, var(--color-accent) 12%, transparent)">
+              <img src="{{ o.photo }}" alt="{{ o.name }}" style="display: block; width: 100%; height: 100%; object-fit: cover">
+            </div>
+            <div style="padding: 16px 20px 20px">
+              <span style="display: block; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); font-feature-settings: 'tnum' 1">{{ o.num }}</span>
+              <span style="display: block; font-family: var(--font-heading); font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin-top: 6px">{{ o.name }}</span>
+              <span style="display: block; font-size: 14px; line-height: 22px; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ o.role }}</span>
+            </div>
           </div>
         </sc-for>
       </div>
@@ -334,9 +339,8 @@ class Component extends DCLogic {
         { title: "Field reports", body: "What broke, what you changed, what you would build differently. Short and specific beats polished." }
       ],
       organizers: [
-        { num: "01", name: "Organizer 1 — TBA", role: "Programme and speakers" },
-        { num: "02", name: "Organizer 2 — TBA", role: "Stream and production" },
-        { num: "03", name: "Organizer 3 — TBA", role: "Community and comms" }
+        { num: "01", name: "Ahmed Bayoumy", role: "Microsoft Azure MVP", photo: "assets/organizers/ahmed-bayoumy.jpeg" },
+        { num: "02", name: "Sebastian Meyer", role: "Microsoft Azure MVP", photo: "assets/organizers/sebastian-meyer.jpeg" }
       ],
       faq: [
         { q: "What does it cost?", a: "Nothing. The day is free and there is no ticket to buy." },
