@@ -60,7 +60,7 @@
         <span style="display: block">Community Day</span>
         <span style="display: block; color: var(--color-accent-700)">3 December 2026</span>
       </h1>
-      <p style="font-size: 17px; line-height: 26px; max-width: 58ch; margin: 32px 0 0">One evening of Logic Apps, the wider Azure integration stack, and the AI patterns being built on top of it. Ten talks from the community, streamed live on YouTube, free to attend from anywhere.</p>
+      <p style="font-size: 17px; line-height: 26px; max-width: 58ch; margin: 32px 0 0">One evening of Logic Apps, the wider Azure integration stack, and the AI patterns being built on top of it. Eight talks from the community, streamed live on YouTube, free to attend from anywhere.</p>
       <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px">
         <a class="btn btn-primary" href="{{ calendarHref }}" download="logic-apps-community-day.ics" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Add to calendar</a>
         <a class="btn btn-secondary" href="#cfs" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Submit a talk</a>
@@ -108,8 +108,8 @@
     <section id="agenda" style="padding: 48px 0 60px">
       <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">02 · Agenda</span>
       <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)">
-      <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: 36px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">Ten talks, one evening</h2>
-      <p style="font-size: 15px; line-height: 24px; max-width: 56ch; margin: 16px 0 32px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Five 25-minute sessions and five 15-minute lightning talks, alternating. The running order is fixed; speakers and titles are confirmed as the call for speakers closes.</p>
+      <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: 36px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">Eight talks, one evening</h2>
+      <p style="font-size: 15px; line-height: 24px; max-width: 56ch; margin: 16px 0 32px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Four 25-minute sessions and four 15-minute lightning talks, alternating. The running order is fixed; speakers and titles are confirmed as the call for speakers closes.</p>
       <div class="lacd-table-scroll">
       <table class="table" style="table-layout: fixed">
         
@@ -162,7 +162,7 @@
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: clamp(24px, 4vw, 64px); align-items: start">
         <div>
           <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: 36px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">The agenda is open</h2>
-          <p style="font-size: 15px; line-height: 24px; max-width: 46ch; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Ten slots: five 25-minute sessions and five 15-minute lightning talks. First-time speakers are welcome — the community day exists to get more Logic Apps work in front of people who use it every day.</p>
+          <p style="font-size: 15px; line-height: 24px; max-width: 46ch; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Eight slots: four 25-minute sessions and four 15-minute lightning talks. First-time speakers are welcome — the community day exists to get more Logic Apps work in front of people who use it every day.</p>
           <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px">
             <a class="btn btn-primary" href="https://sessionize.com/logic-apps-community-day-2026" style="min-height: 40px; padding-inline: 20px; font-size: 15px" target="_blank" rel="noopener noreferrer">Submit a talk</a>
           </div>
@@ -298,8 +298,8 @@ class Component extends DCLogic {
   icsHref() {
     const ics = [
       "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Logic Apps Community Day//EN",
-      "BEGIN:VEVENT", "UID:lacd-2026-11-26@logicappsaviators",
-      "DTSTAMP:20260910T000000Z", "DTSTART:20261203T180000Z", "DTEND:20261203T215500Z",
+      "BEGIN:VEVENT", "UID:lacd-2026-12-03@logicappsaviators",
+      "DTSTAMP:20260910T000000Z", "DTSTART:20261203T180000Z", "DTEND:20261203T211500Z",
       "SUMMARY:Logic Apps Community Day",
       "DESCRIPTION:Free online community day on Logic Apps, Azure Integration Services and AI. Streamed live on YouTube. #LogicAppsAviators",
       "LOCATION:Online — YouTube Live", "END:VEVENT", "END:VCALENDAR"
@@ -331,21 +331,17 @@ class Component extends DCLogic {
         { time: "21:05", slot: "Lightning 3", dur: "15 min", topic: "TBA — selected from the call for speakers." },
         { time: "21:20", slot: "Session 4", dur: "25 min", topic: "TBA — selected from the call for speakers." },
         { time: "21:45", slot: "Lightning 4", dur: "15 min", topic: "TBA — selected from the call for speakers." },
-        { time: "22:00", slot: "Session 5", dur: "25 min", topic: "TBA — selected from the call for speakers." },
-        { time: "22:25", slot: "Lightning 5", dur: "15 min", topic: "TBA — selected from the call for speakers." },
-        { time: "22:40", slot: "Wrap-up", dur: "15 min", topic: "Open Q&A with the speakers, then close." }
+        { time: "22:00", slot: "Wrap-up", dur: "15 min", topic: "Open Q&A with the speakers, then close." }
       ],
       speakers: [
         { num: "01", name: "Session 1 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
         { num: "02", name: "Session 2 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
         { num: "03", name: "Session 3 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
         { num: "04", name: "Session 4 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
-        { num: "05", name: "Session 5 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
-        { num: "06", name: "Lightning 1 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
-        { num: "07", name: "Lightning 2 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
-        { num: "08", name: "Lightning 3 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
-        { num: "09", name: "Lightning 4 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
-        { num: "10", name: "Lightning 5 — TBA", note: "15-minute slot. Announced when the call for speakers closes." }
+        { num: "05", name: "Lightning 1 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
+        { num: "06", name: "Lightning 2 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
+        { num: "07", name: "Lightning 3 — TBA", note: "15-minute slot. Announced when the call for speakers closes." },
+        { num: "08", name: "Lightning 4 — TBA", note: "15-minute slot. Announced when the call for speakers closes." }
       ],
       topics: [
         { title: "Logic Apps in practice", body: "Standard and Consumption, workflow design, deployment, monitoring, performance, migration stories." },
@@ -363,7 +359,7 @@ class Component extends DCLogic {
         { q: "Where do I watch?", a: "The sessions are streamed live on YouTube. The stream link is published here before the event." },
         { q: "What time is it in my timezone?", a: "The event starts at 19:00 CET on 3 December 2026. Use the converter at the top of the page to see the start time where you are." },
         { q: "Will the recordings be available?", a: "Yes. Sessions stay on the YouTube channel after the stream ends." },
-        { q: "How do I speak?", a: "Submit a talk through the call for speakers. Ten slots are open — five 25-minute sessions and five 15-minute lightning talks — and first-time speakers are welcome." },
+        { q: "How do I speak?", a: "Submit a talk through the call for speakers. Eight slots are open — four 25-minute sessions and four 15-minute lightning talks — and first-time speakers are welcome." },
         { q: "What level are the sessions?", a: "Mixed. The agenda is built so that people new to Azure Integration Services and long-time Logic Apps developers both get something out of the evening." }
       ]
     };
