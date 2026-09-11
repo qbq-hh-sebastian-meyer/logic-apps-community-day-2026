@@ -60,7 +60,7 @@
         <span style="display: block">Community Day</span>
         <span style="display: block; color: var(--color-accent-700)">3 December 2026</span>
       </h1>
-      <p style="font-size: 17px; line-height: 26px; max-width: 58ch; margin: 32px 0 0">One evening of Logic Apps, the wider Azure integration stack, and the AI patterns being built on top of it. Eight talks from the community, streamed live on YouTube, free to attend from anywhere.</p>
+      <p style="font-size: 17px; line-height: 26px; max-width: 58ch; margin: 32px 0 0">One day of Logic Apps, the wider Azure integration stack, and the AI patterns being built on top of it. Eight talks from the community, streamed live on YouTube, free to attend from anywhere.</p>
       <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px">
         <a class="btn btn-primary" href="{{ calendarHref }}" download="logic-apps-community-day.ics" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Add to calendar</a>
         <a class="btn btn-secondary" href="#cfs" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Submit a talk</a>
@@ -108,7 +108,7 @@
     <section id="agenda" style="padding: 48px 0 60px">
       <span style="display: block; font-size: 13px; line-height: 12px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700); margin: 0 0 12px">02 · Agenda</span>
       <hr style="height: 1px; border: 0; margin: 0 0 24px; background: var(--color-divider)">
-      <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: 36px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">Eight talks, one evening</h2>
+      <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: 34px; line-height: 36px; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">Eight talks, one day</h2>
       <p style="font-size: 15px; line-height: 24px; max-width: 56ch; margin: 16px 0 32px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">Four 25-minute sessions and four 15-minute lightning talks, alternating. The running order is fixed; speakers and titles are confirmed as the call for speakers closes.</p>
       <div class="lacd-table-scroll">
       <table class="table" style="table-layout: fixed">
@@ -321,7 +321,7 @@ class Component extends DCLogic {
       onZoneChange: (e) => this.setState({ zone: e.target.value }),
       calendarHref: this.icsHref(),
       agenda: [
-        { time: "19:00", slot: "Welcome", dur: "10 min", topic: "What the evening covers and how to ask questions in the stream." },
+        { time: "19:00", slot: "Welcome", dur: "10 min", topic: "What the day covers and how to ask questions in the stream." },
         { time: "19:10", slot: "Session 1", dur: "25 min", topic: "TBA — selected from the call for speakers." },
         { time: "19:35", slot: "Lightning 1", dur: "15 min", topic: "TBA — selected from the call for speakers." },
         { time: "19:50", slot: "Session 2", dur: "25 min", topic: "TBA — selected from the call for speakers." },
@@ -360,7 +360,7 @@ class Component extends DCLogic {
         { q: "What time is it in my timezone?", a: "The event starts at 19:00 CET on 3 December 2026. Use the converter at the top of the page to see the start time where you are." },
         { q: "Will the recordings be available?", a: "Yes. Sessions stay on the YouTube channel after the stream ends." },
         { q: "How do I speak?", a: "Submit a talk through the call for speakers. Eight slots are open — four 25-minute sessions and four 15-minute lightning talks — and first-time speakers are welcome." },
-        { q: "What level are the sessions?", a: "Mixed. The agenda is built so that people new to Azure Integration Services and long-time Logic Apps developers both get something out of the evening." }
+        { q: "What level are the sessions?", a: "Mixed. The agenda is built so that people new to Azure Integration Services and long-time Logic Apps developers both get something out of the day." }
       ]
     };
   }
