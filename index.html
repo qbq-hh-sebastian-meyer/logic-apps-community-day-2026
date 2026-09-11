@@ -9,7 +9,7 @@
 <x-dc>
 <helmet>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Logic Apps Community Day — 26 November 2026</title>
+<title>Logic Apps Community Day — 3 December 2026</title>
 <link rel="stylesheet" href="_ds/industry-74a05b50-8387-4e51-b928-211d28780637/styles.css">
 <script src="_ds/industry-74a05b50-8387-4e51-b928-211d28780637/_ds_bundle.js"></script>
 <style>
@@ -58,7 +58,7 @@
       <h1 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(46px, 6.6vw, 92px); line-height: clamp(48px, 6.9vw, 96px); letter-spacing: 0.01em; text-transform: uppercase; margin: 0 0 0 -0.052em">
         <span style="display: block">Logic Apps</span>
         <span style="display: block">Community Day</span>
-        <span style="display: block; color: var(--color-accent-700)">26 November 2026</span>
+        <span style="display: block; color: var(--color-accent-700)">3 December 2026</span>
       </h1>
       <p style="font-size: 17px; line-height: 26px; max-width: 58ch; margin: 32px 0 0">One evening of Logic Apps, the wider Azure integration stack, and the AI patterns being built on top of it. Ten talks from the community, streamed live on YouTube, free to attend from anywhere.</p>
       <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px">
@@ -231,7 +231,7 @@
     <section style="padding: 48px 0 60px">
       <div class="blueprint" style="padding: clamp(24px, 4vw, 48px)">
         <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
-        <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">26 November, 19:00 CET</h2>
+        <h2 style="font-family: var(--font-heading); font-weight: 600; font-size: clamp(30px, 4vw, 48px); line-height: 1.05; letter-spacing: 0.02em; text-transform: uppercase; margin: 0">3 December, 19:00 CET</h2>
         <p style="font-size: 16px; line-height: 24px; max-width: 52ch; margin: 20px 0 0">Free, online, and streamed live on YouTube. Put it in your calendar now; the stream link and the full agenda follow closer to the day.</p>
         <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 24px">
           <a class="btn btn-primary" href="{{ calendarHref }}" download="logic-apps-community-day.ics" style="min-height: 40px; padding-inline: 20px; font-size: 15px">Add to calendar</a>
@@ -241,7 +241,7 @@
     </section>
 
     <footer style="display: flex; flex-wrap: wrap; gap: 12px 32px; align-items: center; padding: 32px 0 48px; border-top: 1px solid var(--color-divider); font-size: 13px; line-height: 24px; color: color-mix(in srgb, var(--color-text) 70%, transparent)">
-      <span style="margin-right: auto">Logic Apps Community Day · 26 November 2026 · Online</span>
+      <span style="margin-right: auto">Logic Apps Community Day · 3 December 2026 · Online</span>
       <span style="letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; color: var(--color-accent-700)">#LogicAppsAviators</span>
       <span>Streamed live on YouTube</span>
     </footer>
@@ -250,7 +250,7 @@
 
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{}">
-const START = Date.UTC(2026, 10, 26, 18, 0, 0); // 19:00 Europe/Berlin (UTC+1) on 26 Nov 2026
+const START = Date.UTC(2026, 11, 3, 18, 0, 0); // 19:00 Europe/Berlin (UTC+1) on 3 Dec 2026
 
 const ZONE_LIST = [
   ["Europe/Berlin", "Berlin / Amsterdam"],
@@ -292,14 +292,14 @@ class Component extends DCLogic {
         timeZone: this.state.zone, weekday: "short", day: "numeric",
         month: "short", hour: "2-digit", minute: "2-digit", hour12: false
       }).format(new Date(START));
-    } catch (e) { return "26 Nov, 18:00 UTC"; }
+    } catch (e) { return "3 Dec, 18:00 UTC"; }
   }
 
   icsHref() {
     const ics = [
       "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Logic Apps Community Day//EN",
       "BEGIN:VEVENT", "UID:lacd-2026-11-26@logicappsaviators",
-      "DTSTAMP:20260910T000000Z", "DTSTART:20261126T180000Z", "DTEND:20261126T215500Z",
+      "DTSTAMP:20260910T000000Z", "DTSTART:20261203T180000Z", "DTEND:20261203T215500Z",
       "SUMMARY:Logic Apps Community Day",
       "DESCRIPTION:Free online community day on Logic Apps, Azure Integration Services and AI. Streamed live on YouTube. #LogicAppsAviators",
       "LOCATION:Online — YouTube Live", "END:VEVENT", "END:VCALENDAR"
@@ -361,7 +361,7 @@ class Component extends DCLogic {
         { q: "What does it cost?", a: "Nothing. The day is free and there is no ticket to buy." },
         { q: "Do I need to register?", a: "No registration is required. Add the date to your calendar and join the stream on the day." },
         { q: "Where do I watch?", a: "The sessions are streamed live on YouTube. The stream link is published here before the event." },
-        { q: "What time is it in my timezone?", a: "The event starts at 19:00 CET on 26 November 2026. Use the converter at the top of the page to see the start time where you are." },
+        { q: "What time is it in my timezone?", a: "The event starts at 19:00 CET on 3 December 2026. Use the converter at the top of the page to see the start time where you are." },
         { q: "Will the recordings be available?", a: "Yes. Sessions stay on the YouTube channel after the stream ends." },
         { q: "How do I speak?", a: "Submit a talk through the call for speakers. Ten slots are open — five 25-minute sessions and five 15-minute lightning talks — and first-time speakers are welcome." },
         { q: "What level are the sessions?", a: "Mixed. The agenda is built so that people new to Azure Integration Services and long-time Logic Apps developers both get something out of the evening." }
