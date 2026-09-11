@@ -115,7 +115,7 @@
         
         <thead>
           <tr>
-            <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">CET</th>
+            <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">{{ zoneAbbr }}</th>
             <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Slot</th>
             <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Length</th>
             <th scope="col" style="font-size: 13px; font-weight: 600; padding: 12px 24px 12px 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">Topic</th>
@@ -133,7 +133,7 @@
         </tbody>
       </table>
       </div>
-      <p style="font-size: 13px; line-height: 24px; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">All times CET. Use the converter above for your own timezone.</p>
+      <p style="font-size: 13px; line-height: 24px; margin: 16px 0 0; color: color-mix(in srgb, var(--color-text) 70%, transparent)">All agenda times are shown in {{ zoneName }}.</p>
     </section>
 
     <section id="speakers" style="padding: 48px 0 60px">
@@ -295,6 +295,41 @@ class Component extends DCLogic {
     } catch (e) { return "3 Dec, 18:00 UTC"; }
   }
 
+  agendaTime(offsetMinutes) {
+    try {
+      return new Intl.DateTimeFormat("en-GB", {
+        timeZone: this.state.zone,
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+        hourCycle: "h23"
+      }).format(new Date(START + offsetMinutes * 60000));
+    } catch (e) {
+      return new Intl.DateTimeFormat("en-GB", {
+        timeZone: "UTC",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: false,
+        hourCycle: "h23"
+      }).format(new Date(START + offsetMinutes * 60000));
+    }
+  }
+
+  zoneAbbr() {
+    try {
+      const part = new Intl.DateTimeFormat("en-GB", {
+        timeZone: this.state.zone,
+        timeZoneName: "short"
+      }).formatToParts(new Date(START)).find(p => p.type === "timeZoneName");
+      return part ? part.value : this.state.zone;
+    } catch (e) { return "UTC"; }
+  }
+
+  zoneName() {
+    const zone = this.state.zones.find(z => z[0] === this.state.zone);
+    return zone ? zone[1] : this.state.zone;
+  }
+
   icsHref() {
     const ics = [
       "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Logic Apps Community Day//EN",
@@ -318,20 +353,22 @@ class Component extends DCLogic {
       zone: this.state.zone,
       zones: this.state.zones.map(z => ({ id: z[0], label: z[1] })),
       zoneTime: this.zoneTime(),
+      zoneAbbr: this.zoneAbbr(),
+      zoneName: this.zoneName(),
       onZoneChange: (e) => this.setState({ zone: e.target.value }),
       calendarHref: this.icsHref(),
       agenda: [
-        { time: "19:00", slot: "Welcome", dur: "10 min", topic: "What the day covers and how to ask questions in the stream." },
-        { time: "19:10", slot: "Session 1", dur: "25 min", topic: "TBA — selected from the call for speakers." },
-        { time: "19:35", slot: "Lightning 1", dur: "15 min", topic: "TBA — selected from the call for speakers." },
-        { time: "19:50", slot: "Session 2", dur: "25 min", topic: "TBA — selected from the call for speakers." },
-        { time: "20:15", slot: "Lightning 2", dur: "15 min", topic: "TBA — selected from the call for speakers." },
-        { time: "20:30", slot: "Break", dur: "10 min", topic: "Chat stays open." },
-        { time: "20:40", slot: "Session 3", dur: "25 min", topic: "TBA — selected from the call for speakers." },
-        { time: "21:05", slot: "Lightning 3", dur: "15 min", topic: "TBA — selected from the call for speakers." },
-        { time: "21:20", slot: "Session 4", dur: "25 min", topic: "TBA — selected from the call for speakers." },
-        { time: "21:45", slot: "Lightning 4", dur: "15 min", topic: "TBA — selected from the call for speakers." },
-        { time: "22:00", slot: "Wrap-up", dur: "15 min", topic: "Open Q&A with the speakers, then close." }
+        { time: this.agendaTime(0), slot: "Welcome", dur: "10 min", topic: "What the day covers and how to ask questions in the stream." },
+        { time: this.agendaTime(10), slot: "Session 1", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(35), slot: "Lightning 1", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(50), slot: "Session 2", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(75), slot: "Lightning 2", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(90), slot: "Break", dur: "10 min", topic: "Chat stays open." },
+        { time: this.agendaTime(100), slot: "Session 3", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(125), slot: "Lightning 3", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(140), slot: "Session 4", dur: "25 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(165), slot: "Lightning 4", dur: "15 min", topic: "TBA — selected from the call for speakers." },
+        { time: this.agendaTime(180), slot: "Wrap-up", dur: "15 min", topic: "Open Q&A with the speakers, then close." }
       ],
       speakers: [
         { num: "01", name: "Session 1 — TBA", note: "25-minute slot. Announced when the call for speakers closes." },
