@@ -35,6 +35,148 @@
     .lacd-countdown-header span { flex-basis: 100%; border-left: none !important; border-top: 1px solid var(--color-divider); }
     .lacd-countdown-header span:first-child { border-top: none; }
   }
+
+  /* RETRO HOMEPAGE PREVIEW — intentionally scoped to this page. */
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
+  :root {
+    --color-bg: #070b2b;
+    --color-surface: #0d1440;
+    --color-text: #eef7ff;
+    --color-accent: #37e8ff;
+    --color-accent-700: #37e8ff;
+    --color-accent-800: #9bfff5;
+    --color-divider: rgba(55, 232, 255, 0.34);
+    --font-heading: "Press Start 2P", monospace;
+    --font-body: "Share Tech Mono", ui-monospace, monospace;
+    --shadow-sm: 0 0 0 1px rgba(55, 232, 255, 0.24), 0 0 16px rgba(55, 232, 255, 0.16);
+    --shadow-md: 0 0 0 1px rgba(55, 232, 255, 0.3), 0 0 28px rgba(55, 232, 255, 0.22);
+  }
+  html {
+    background: #050820;
+    scroll-behavior: smooth;
+  }
+  body {
+    background:
+      linear-gradient(rgba(55, 232, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(55, 232, 255, 0.045) 1px, transparent 1px),
+      radial-gradient(circle at 50% -10%, #19286f 0, #070b2b 42rem);
+    background-size: 28px 28px, 28px 28px, auto;
+    color: var(--color-text);
+    font-family: var(--font-body) !important;
+    letter-spacing: 0.025em;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 20;
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0 1px, transparent 1px 4px);
+    mix-blend-mode: screen;
+    opacity: 0.45;
+  }
+  h1, h2, h3, h4, h5, h6, .nav-brand, .btn, summary, .card-title {
+    font-family: var(--font-heading) !important;
+    text-transform: uppercase;
+  }
+  h1 {
+    text-shadow: 4px 4px 0 #17217a, 0 0 22px rgba(55, 232, 255, 0.5);
+  }
+  h1 span:last-child {
+    color: #d7ff45 !important;
+    text-shadow: 4px 4px 0 #4d5d0c, 0 0 18px rgba(215, 255, 69, 0.4);
+  }
+  a { color: #73f5ff !important; }
+  a:hover { color: #d7ff45 !important; }
+  .nav {
+    background: rgba(5, 8, 32, 0.92);
+    border-bottom: 2px solid #37e8ff !important;
+    box-shadow: 0 3px 0 #15206d, 0 0 22px rgba(55, 232, 255, 0.25);
+    position: relative;
+    z-index: 2;
+  }
+  .nav-brand { color: #d7ff45; text-shadow: 2px 2px 0 #32430d; }
+  .nav-brand img { image-rendering: pixelated; filter: drop-shadow(0 0 8px rgba(55, 232, 255, 0.6)); }
+  .nav a:not(.btn) { color: #eef7ff !important; }
+  .btn {
+    border: 2px solid #37e8ff !important;
+    border-radius: 0 !important;
+    box-shadow: 3px 3px 0 #17217a;
+    min-height: 42px;
+    letter-spacing: 0.04em;
+  }
+  .btn-primary {
+    background: #37e8ff !important;
+    color: #050820 !important;
+    border-color: #37e8ff !important;
+    box-shadow: 3px 3px 0 #d7ff45, 0 0 18px rgba(55, 232, 255, 0.38);
+  }
+  .btn-primary:hover {
+    background: #d7ff45 !important;
+    border-color: #d7ff45 !important;
+    color: #050820 !important;
+  }
+  .btn-secondary { color: #eef7ff !important; background: #111958; }
+  .btn-secondary:hover { background: #1b2780 !important; }
+  .blueprint {
+    border: 2px solid #37e8ff !important;
+    background: rgba(13, 20, 64, 0.74);
+    box-shadow: var(--shadow-md);
+  }
+  .blueprint > .corner { color: #d7ff45; }
+  section > hr, .hr { background: #37e8ff !important; opacity: 0.7; }
+  section > span {
+    color: #d7ff45 !important;
+    text-shadow: 1px 1px 0 #36450d;
+  }
+  .lacd-countdown-header {
+    color: #d7ff45;
+    background: rgba(55, 232, 255, 0.08);
+  }
+  .lacd-countdown-header span { color: inherit !important; }
+  .lacd-countdown-header span:last-child { color: #73f5ff !important; }
+  .lacd-countdown-header + div > div { border-color: var(--color-divider) !important; }
+  .lacd-countdown-header + div span:last-child {
+    color: #eef7ff !important;
+    text-shadow: 0 0 12px rgba(55, 232, 255, 0.65);
+  }
+  .input, select {
+    color: #eef7ff !important;
+    background: #111958 !important;
+    border: 2px solid #37e8ff !important;
+    border-radius: 0 !important;
+  }
+  table th { color: #d7ff45 !important; }
+  table td { border-color: rgba(55, 232, 255, 0.22) !important; }
+  table tbody tr:hover { background: rgba(55, 232, 255, 0.1) !important; }
+  table td:first-child { color: #d7ff45 !important; }
+  section .blueprint > div:first-of-type {
+    background: repeating-linear-gradient(135deg, rgba(55, 232, 255, 0.14) 0 6px, rgba(13, 20, 64, 0.6) 6px 12px) !important;
+  }
+  section .blueprint img { filter: saturate(0.78) contrast(1.15); }
+  details summary::before {
+    content: "▶ ";
+    color: #d7ff45;
+    font-size: 0.7em;
+  }
+  details[open] summary::before { content: "▼ "; }
+  footer {
+    background: rgba(5, 8, 32, 0.86);
+    color: #d9faff !important;
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    text-shadow: 0 0 8px rgba(55, 232, 255, 0.35);
+  }
+  footer span { color: #d9faff !important; }
+  footer span:nth-child(2) {
+    color: #d7ff45 !important;
+    text-shadow: 0 0 8px rgba(215, 255, 69, 0.45);
+  }
+  @media (max-width: 720px) {
+    .nav { padding-top: 14px !important; padding-bottom: 14px !important; }
+    .nav-brand { font-size: 11px !important; line-height: 1.5; }
+    .nav-brand img { height: 28px !important; }
+  }
 </style>
 </helmet>
 
