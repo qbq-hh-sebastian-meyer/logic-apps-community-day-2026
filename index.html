@@ -210,8 +210,8 @@
               </div>
               <span style="display: block; font-family: var(--font-heading); font-weight: 600; font-size: 21px; line-height: 26px; letter-spacing: 0.02em; text-transform: uppercase; margin-top: 6px">{{ o.name }}</span>
               <span style="display: block; font-size: 14px; line-height: 22px; margin-top: 6px; color: color-mix(in srgb, var(--color-text) 78%, transparent)">{{ o.role }}</span>
-              <sc-if value="{{ o.mvp }}">
-                <img src="assets/mvp-badge.webp" alt="Microsoft MVP" style="display: block; height: 48px; width: auto; margin: 12px auto 0 0">
+              <sc-if value="{{ o.badge }}">
+                <img src="{{ o.badge }}" alt="{{ o.badgeAlt }}" style="display: block; height: 48px; width: auto; margin: 12px auto 0 0">
               </sc-if>
             </div>
           </div>
@@ -391,9 +391,9 @@ class Component extends DCLogic {
         { title: "Field reports", body: "What broke, what you changed, what you would build differently. Short and specific beats polished." }
       ],
       organizers: [
-        { num: "01", name: "Ahmed Bayoumy", role: "Microsoft Azure MVP", photo: "assets/organizers/ahmed-bayoumy.jpeg", linkedin: "https://www.linkedin.com/in/ahmed-gb/", youtube: "https://www.youtube.com/@contica", mvp: true },
-        { num: "02", name: "Sebastian Meyer", role: "Microsoft Azure MVP", photo: "assets/organizers/sebastian-meyer.jpeg", linkedin: "https://www.linkedin.com/in/sebastianmeyerit/", youtube: "https://www.youtube.com/@msit", website: "https://www.sebastianmeyer.io/", mvp: true },
-        { num: "03", name: "Wagner Silveira", role: "Principal Product Manager @ Microsoft", photo: "assets/organizers/wagner-silveira.jpeg", linkedin: "https://www.linkedin.com/in/wagnersilveira/" }
+        { num: "01", name: "Ahmed Bayoumy", role: "Microsoft Azure MVP", photo: "assets/organizers/ahmed-bayoumy.jpeg", linkedin: "https://www.linkedin.com/in/ahmed-gb/", youtube: "https://www.youtube.com/@contica", badge: "assets/mvp-badge.webp", badgeAlt: "Microsoft MVP" },
+        { num: "02", name: "Sebastian Meyer", role: "Microsoft Azure MVP", photo: "assets/organizers/sebastian-meyer.jpeg", linkedin: "https://www.linkedin.com/in/sebastianmeyerit/", youtube: "https://www.youtube.com/@msit", website: "https://www.sebastianmeyer.io/", badge: "assets/mvp-badge.webp", badgeAlt: "Microsoft MVP" },
+        { num: "03", name: "Wagner Silveira", role: "Principal Product Manager @ Microsoft", photo: "assets/organizers/wagner-silveira.jpeg", linkedin: "https://www.linkedin.com/in/wagnersilveira/", badge: "assets/microsoft-badge.jpg", badgeAlt: "Microsoft" }
       ],
       faq: [
         { q: "What does it cost?", a: "Nothing. The day is free and there is no ticket to buy." },
