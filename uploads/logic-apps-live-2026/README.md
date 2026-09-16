@@ -6,6 +6,8 @@ Matching arcade artwork for Logic Apps Community Day 2026.
 | --- | --- |
 | [logic-apps-live.pptx](logic-apps-live.pptx) | One 16:9 PowerPoint slide with presenter notes. Copy into a Logic Apps Live deck. |
 | [logic-apps-live-slide.png](logic-apps-live-slide.png) | Standalone slide artwork for streaming or presentation software. |
+| [logic-apps-organizers.pptx](logic-apps-organizers.pptx) | One 16:9 slide featuring pixel-art portraits of Ahmed Bayoumy, Sebastian Meyer and Wagner Silveira. |
+| [logic-apps-organizers-slide.png](logic-apps-organizers-slide.png) | Standalone organizer slide artwork. |
 | [sessionize-banner-1280x320.png](sessionize-banner-1280x320.png) | Sessionize banner, exactly 1280 × 320 pixels (4:1). |
 
 The PowerPoint uses one artwork image, so its lettering is not individually editable. Artwork adapted from the campaign poster using OpenAI image generation.
