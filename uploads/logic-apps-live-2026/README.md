@@ -4,7 +4,7 @@ Matching arcade artwork for Logic Apps Community Day 2026.
 
 | File | Use |
 | --- | --- |
-| [logic-apps-event-qr.pptx](logic-apps-event-qr.pptx) | General event promotion slide with all three pixel-art organizers and a QR code linking to the event website. Recommended for Logic Apps Live. |
+| [logic-apps-event-qr.pptx](logic-apps-event-qr.pptx) | General event promotion slide with all three pixel-art organizers and a submission QR code and visible event website address. Recommended for Logic Apps Live. |
 | [logic-apps-event-qr.png](logic-apps-event-qr.png) | The same event promotion slide as a 1920 × 1080 PNG. |
 | [logic-apps-live.pptx](logic-apps-live.pptx) | One 16:9 PowerPoint slide with presenter notes. Copy into a Logic Apps Live deck. |
 | [logic-apps-live-slide.png](logic-apps-live-slide.png) | Standalone slide artwork for streaming or presentation software. |
@@ -18,6 +18,7 @@ The slide promotes the call for speakers, which closes on **20 October 2026 at 2
 
 Submission link: https://sessionize.com/logic-apps-community-day-2026
 
-The event QR slide promotes attendance and has no call-for-speakers deadline. Its QR code links to https://qbq-hh-sebastian-meyer.github.io/logic-apps-community-day-2026/ and was verified from the exported image at 1080p and 720p. In PowerPoint the QR is a separate image object.
+The event QR slide promotes attendance and has no call-for-speakers deadline. Its QR code links to https://sessionize.com/logic-apps-community-day-2026/ and was verified from the exported image at 1080p and 720p. In PowerPoint the QR is a separate image object.
 
 These are standalone download files. They do not change the website's HTML, CSS, scripts, or configuration.
+
