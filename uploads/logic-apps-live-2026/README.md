@@ -4,6 +4,8 @@ Matching arcade artwork for Logic Apps Community Day 2026.
 
 | File | Use |
 | --- | --- |
+| [logic-apps-event-qr.pptx](logic-apps-event-qr.pptx) | General event promotion slide with all three pixel-art organizers and a QR code linking to the event website. Recommended for Logic Apps Live. |
+| [logic-apps-event-qr.png](logic-apps-event-qr.png) | The same event promotion slide as a 1920 × 1080 PNG. |
 | [logic-apps-live.pptx](logic-apps-live.pptx) | One 16:9 PowerPoint slide with presenter notes. Copy into a Logic Apps Live deck. |
 | [logic-apps-live-slide.png](logic-apps-live-slide.png) | Standalone slide artwork for streaming or presentation software. |
 | [logic-apps-organizers.pptx](logic-apps-organizers.pptx) | One 16:9 slide featuring pixel-art portraits of Ahmed Bayoumy, Sebastian Meyer and Wagner Silveira. |
@@ -15,5 +17,7 @@ The PowerPoint uses one artwork image, so its lettering is not individually edit
 The slide promotes the call for speakers, which closes on **20 October 2026 at 23:59 CEST**. Use it before that deadline. The event takes place on **3 December 2026 at 19:00 CET**, online and free, live on YouTube.
 
 Submission link: https://sessionize.com/logic-apps-community-day-2026
+
+The event QR slide promotes attendance and has no call-for-speakers deadline. Its QR code links to https://qbq-hh-sebastian-meyer.github.io/logic-apps-community-day-2026/ and was verified from the exported image at 1080p and 720p. In PowerPoint the QR is a separate image object.
 
 These are standalone download files. They do not change the website's HTML, CSS, scripts, or configuration.
