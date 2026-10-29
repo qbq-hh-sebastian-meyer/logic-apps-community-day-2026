@@ -1143,11 +1143,19 @@ table.table th:nth-child(4) {
 }
 
 .lacd-slot__figure {
-  display: none;
+  display: block;
+  position: absolute;
+  top: 7%;
+  left: 7%;
+  width: 86%;
+  height: 86%;
+  object-fit: cover;
+  image-rendering: pixelated;
 }
 
 .lacd-slot__num {
   position: absolute;
+  z-index: 1;
   top: 7.5%;
   left: 7.5%;
   width: 22%;
@@ -1163,6 +1171,11 @@ table.table th:nth-child(4) {
   text-align: center;
 }
 
+.lacd-slot__links {
+  justify-content: center;
+  margin-top: 8px;
+}
+
 .lacd-slot__name {
   display: block;
   font: 25px/1.1 Jersey,monospace;
@@ -1174,6 +1187,28 @@ table.table th:nth-child(4) {
   margin-top: 8px;
   font: 15px/1.5 var(--font-body);
   color: #b3cde1;
+}
+
+.lacd-agenda-speaker {
+  display: block;
+  margin-top: 6px;
+  color: #a9f2ff;
+}
+
+.lacd-agenda-details {
+  margin-top: 12px;
+  font: 14px/1.6 var(--font-body);
+  color: #d6e4ef;
+  text-align: left;
+}
+
+.lacd-agenda-details summary {
+  cursor: pointer;
+  color: #a9f2ff;
+}
+
+.lacd-agenda-details p {
+  margin: 10px 0 0;
 }
 
 /* Original perspective floor, sampled before the poster's information chips. */
