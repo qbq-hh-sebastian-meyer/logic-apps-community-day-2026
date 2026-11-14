@@ -92,6 +92,23 @@ a:hover {
   padding-bottom: 24px;
 }
 
+.lacd-stream {
+  margin-top: 24px;
+  padding: 4px;
+  background: linear-gradient(135deg,var(--cyan),var(--structural) 60%,var(--cobalt));
+  box-shadow: 0 0 18px #0078dc33;
+}
+
+.lacd-stream iframe {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 200px;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  background: #000;
+}
+
 .lacd-trim {
   display: none;
 }
